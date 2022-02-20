@@ -23,7 +23,7 @@ $result = $stmt->get_result();
 $stmt->close;
     // this generates the JSON file
     $rows = array();
-    $sql = ("SELECT id, jellyname, jelly_image, flavortext, claimed, owner_name, owner_link, owner_button, comments FROM jellytable WHERE approved = 1;");
+    $sql = ("SELECT id, jellyname, jelly_image, flavortext, claimed, owner_name, owner_desc, owner_link, owner_button, comments FROM jellytable WHERE approved = 1;");
 mysqli_set_charset($con, 'utf8');
 if ($result = mysqli_query($con, $sql)) {
     if (mysqli_num_rows($result) > 0) {
@@ -47,7 +47,7 @@ if (isset($_POST['del'])) {
     
     // this generates the JSON file
     $rows = array();
-    $sql = ("SELECT id, jellyname, jelly_image, flavortext, claimed, owner_name, owner_link, owner_button, comments FROM jellytable WHERE approved = 1;");
+    $sql = ("SELECT id, jellyname, jelly_image, flavortext, claimed, owner_name, owner_desc, owner_link, owner_button, comments FROM jellytable WHERE approved = 1;");
 mysqli_set_charset($con, 'utf8');
 if ($result = mysqli_query($con, $sql)) {
     if (mysqli_num_rows($result) > 0) {
@@ -71,7 +71,7 @@ $stmt->close();
 $rows = array();
 
 // this generates the JSON file
-$sql = ("SELECT id, jellyname, jelly_image, flavortext, claimed, owner_name, owner_link, owner_button, comments FROM jellytable WHERE approved = 1;");
+$sql = ("SELECT id, jellyname, jelly_image, flavortext, claimed, owner_name, owner_desc, owner_link, owner_button, comments FROM jellytable WHERE approved = 1;");
 mysqli_set_charset($con, 'utf8');
 if ($result = mysqli_query($con, $sql)) {
     if (mysqli_num_rows($result) > 0) {
