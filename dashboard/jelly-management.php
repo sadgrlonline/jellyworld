@@ -41,9 +41,9 @@ while ($row = $result->fetch_assoc()) {
  $comments = $row["comments"];
  $claimed = $row["claimed"];
      if ($claimed == 1) {
-  echo '<div class="box ' . $id . '"><div class="name">' . $jellyname . '</div>' . '<div class="image"><img src="' . $jellyimg . '"></div><div class="description">' . $jellydesc . '</div><div class="bond"><strong><em>bonded with: <a href="' . $ownerlink . '" target="_blank">' . $ownername . '</a></em></strong><div class="bondOwnerButton">' . $ownerbutton . '</div><div class="bondOwnerDesc">' . $ownerdesc . '</div><div class="comments">' . $comments . '</div></div><div class="claimed">' . $claimed . '</div><a href="#" class="delete" data-id="' . $id . '">delete</a><a href="#" class="edit" data-id="' . $id . '">edit</a></div>' ;
+  echo '<div class="box ' . $id . '"><div class="name">' . $jellyname . '</div>' . '<div class="image"><img src="' . $jellyimg . '"></div><div class="description">' . $jellydesc . '</div><div class="bond"><strong><em>bonded with: <a href="' . $ownerlink . '" target="_blank">' . $ownername . '</a></em></strong><div class="view bondOwnerButton">' . $ownerbutton . '</div><div class="view bondOwnerDesc">' . $ownerdesc . '</div><div class="comments">' . $comments . '</div></div><div class="view claimBox">' . $claimed . '</div><a href="#" class="delete" data-id="' . $id . '">delete</a><a href="#" class="edit" data-id="' . $id . '">edit</a></div>' ;
      } else {
-          echo '<div class="box ' . $id . '"><div class="name">' . $jellyname . '</div>' . '<div class="image"><img src="' . $jellyimg . '"></div><div class="description">' . $jellydesc . '</div><div class="bond available"><strong><em>bonded with: <a href="' . $ownerlink . '" target="_blank">' . $ownername . '</a></em></strong><div class="bondOwnerDesc">' . $ownerdesc . '</div><div class="bondOwnerButton">' . $ownerbutton . '</div><div class="comments">' . $comments . '</div></div><div class="claimed">' . $claimed . '</div><div class="available">Available Now!</div><a href="#" class="delete" data-id="' . $id . '">delete</a><a href="#" class="edit" data-id="' . $id . '">edit</a></div>' ;
+          echo '<div class="box ' . $id . '"><div class="name">' . $jellyname . '</div>' . '<div class="image"><img src="' . $jellyimg . '"></div><div class="description">' . $jellydesc . '</div><div class="bond available"><strong><em>bonded with: <a href="' . $ownerlink . '" target="_blank">' . $ownername . '</a></em></strong><div class="bondOwnerDesc">' . $ownerdesc . '</div><div class="bondOwnerButton">' . $ownerbutton . '</div><div class="comments">' . $comments . '</div></div><div class="view claimBox">' . $claimed . '</div><div class="available">Available Now!</div><a href="#" class="delete" data-id="' . $id . '">delete</a><a href="#" class="edit" data-id="' . $id . '">edit</a></div>' ;
      }
  
 }
@@ -93,14 +93,7 @@ while ($row = $result->fetch_assoc()) {
     .available {
         display:none;
     }
-    .claimed {
-        display:none;
-    }
-    .bondOwnerDesc {
-       display:none;
-        
-    }
-    .bondOwnerButton {
+    .view {
         display:none;
     }
 
@@ -112,9 +105,8 @@ while ($row = $result->fetch_assoc()) {
     $('.box').on("click", ".edit", function(e) {
         // this makes the boxes stretch when you click to edit
         $('.box').css("height", "auto");
-        $('.available').css("display", "block");
-        $('.claimed').css("display", "block");
-        $('.bondOwnerButton').css("display", "block");
+        $(this).parent('.box').children('.view').css("display", "block");
+        
         
         // get id (correlates to db id)
         var id = $(this).data('id');
@@ -129,7 +121,7 @@ while ($row = $result->fetch_assoc()) {
         var jellyOwnerLink = $(this).parent('.box').children('.bond').children().children().children('a').attr('href');
         var jellyOwnerButton = $(this).parent('.box').children('.bond').children('.bondOwnerButton').text();
         var jellyOwnerComments = $(this).parent('.box').children('.comments').text();
-        var claimed = $(this).parent('.box').children('.claimed').text();
+        var claimed = $(this).parent('.box').children('.claimBox').text();
         console.log(jellyOwnerButton);
         console.log('claimed is..' + claimed);
         
@@ -139,7 +131,7 @@ while ($row = $result->fetch_assoc()) {
         $(this).parent('.box').children('.description').html('<label>Flavor Text</label><textarea class="descriptionInput">' + jellyDesc + '</textarea>');
         $(this).parent('.box').children('.bond').html('<label>Owner</label><input type="text" class="bondOwnerInput" value="' + jellyOwnerName + '"><br><label>Description:</label><input type="text" class="bondOwnerDesc" value="' + jellyOwnerDesc + '"><br><label>Link:</label><input type="text" class="bondOwnerLink" value="' + jellyOwnerLink + '"><br><label>Button</label><input type="text" class="bondOwnerButton" value="' + jellyOwnerButton + '">');
         $(this).parent('.box').children('.comments').html('<label>Comments</label><textarea class="bondOwnerComments">' + jellyOwnerComments + '</textarea>');
-            $(this).parent('.box').children('.claimed').html('<label>Claimed?</label><input type="text" class="claimBox" value="' + claimed + '"></div>');
+            $(this).parent('.box').children('.claimBox').html('<label>Claimed?</label><input type="text" class="claimBox" value="' + claimed + '"></div>');
 
         
         // adds the save button
@@ -152,6 +144,9 @@ while ($row = $result->fetch_assoc()) {
     
         $('.box').on("click", ".save", function(e) {
         var id = $(this).data('id');
+        $('.available').css("display", "none");
+        $('.claimed').css("display", "none");
+        $('.view').css("display", "none");
         e.preventDefault();
         var jellyName = $(this).parent('.box').children('.name').children('.nameInput').val();
         var jellyImg = $(this).parent('.box').children('.image').children('.imageInput').val();
