@@ -1,0 +1,28 @@
+[22-Oct-2021 12:55:42 US/Eastern] PHP Warning:  mysqli_stmt::bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home/sadness/public_html/login-demo/register/index.php on line 67
+[14-Feb-2022 17:08:01 US/Eastern] PHP Warning:  mysqli_stmt::bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home/sadness/public_html/jellyworld/register/index.php on line 67
+[15-Feb-2022 18:33:36 US/Eastern] PHP Notice:  Undefined variable: to in /home/sadness/public_html/jellyworld/register/index.php on line 32
+[15-Feb-2022 18:33:36 US/Eastern] PHP Notice:  Undefined variable: subject in /home/sadness/public_html/jellyworld/register/index.php on line 32
+[15-Feb-2022 18:33:36 US/Eastern] PHP Notice:  Undefined variable: message in /home/sadness/public_html/jellyworld/register/index.php on line 32
+[15-Feb-2022 18:33:36 US/Eastern] PHP Warning:  mysqli_stmt::bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home/sadness/public_html/jellyworld/register/index.php on line 52
+[15-Feb-2022 18:33:52 US/Eastern] PHP Notice:  Undefined variable: to in /home/sadness/public_html/jellyworld/register/index.php on line 32
+[15-Feb-2022 18:33:52 US/Eastern] PHP Notice:  Undefined variable: subject in /home/sadness/public_html/jellyworld/register/index.php on line 32
+[15-Feb-2022 18:33:52 US/Eastern] PHP Notice:  Undefined variable: message in /home/sadness/public_html/jellyworld/register/index.php on line 32
+[15-Feb-2022 18:33:53 US/Eastern] PHP Warning:  mysqli_stmt::bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home/sadness/public_html/jellyworld/register/index.php on line 52
+[15-Feb-2022 18:45:07 US/Eastern] PHP Notice:  Undefined variable: to in /home/sadness/public_html/jellyworld/register/register.php on line 32
+[15-Feb-2022 18:45:07 US/Eastern] PHP Notice:  Undefined variable: subject in /home/sadness/public_html/jellyworld/register/register.php on line 32
+[15-Feb-2022 18:45:07 US/Eastern] PHP Notice:  Undefined variable: message in /home/sadness/public_html/jellyworld/register/register.php on line 32
+[15-Feb-2022 18:45:07 US/Eastern] PHP Warning:  mysqli_stmt::bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home/sadness/public_html/jellyworld/register/register.php on line 52
+[15-Feb-2022 18:45:07 US/Eastern] PHP Warning:  include(template.php): failed to open stream: No such file or directory in /home/sadness/public_html/jellyworld/register/register.php on line 86
+[15-Feb-2022 18:45:07 US/Eastern] PHP Warning:  include(): Failed opening 'template.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/sadness/public_html/jellyworld/register/register.php on line 86
+[17-Feb-2022 08:37:39 US/Eastern] PHP Notice:  Undefined variable: to in /home/sadness/public_html/jellyworld/register/register.php on line 32
+[17-Feb-2022 08:37:39 US/Eastern] PHP Notice:  Undefined variable: subject in /home/sadness/public_html/jellyworld/register/register.php on line 32
+[17-Feb-2022 08:37:39 US/Eastern] PHP Notice:  Undefined variable: message in /home/sadness/public_html/jellyworld/register/register.php on line 32
+[17-Feb-2022 08:37:39 US/Eastern] PHP Warning:  mysqli_stmt::bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home/sadness/public_html/jellyworld/register/register.php on line 52
+[17-Feb-2022 08:37:39 US/Eastern] PHP Warning:  include(template.php): failed to open stream: No such file or directory in /home/sadness/public_html/jellyworld/register/register.php on line 86
+[17-Feb-2022 08:37:39 US/Eastern] PHP Warning:  include(): Failed opening 'template.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/sadness/public_html/jellyworld/register/register.php on line 86
+[17-Feb-2022 20:26:48 US/Eastern] PHP Notice:  Undefined variable: to in /home/sadness/public_html/jellyworld/register/register.php on line 32
+[17-Feb-2022 20:26:48 US/Eastern] PHP Notice:  Undefined variable: subject in /home/sadness/public_html/jellyworld/register/register.php on line 32
+[17-Feb-2022 20:26:48 US/Eastern] PHP Notice:  Undefined variable: message in /home/sadness/public_html/jellyworld/register/register.php on line 32
+[17-Feb-2022 20:26:48 US/Eastern] PHP Warning:  mysqli_stmt::bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home/sadness/public_html/jellyworld/register/register.php on line 52
+[17-Feb-2022 20:26:48 US/Eastern] PHP Warning:  include(template.php): failed to open stream: No such file or directory in /home/sadness/public_html/jellyworld/register/register.php on line 86
+[17-Feb-2022 20:26:48 US/Eastern] PHP Warning:  include(): Failed opening 'template.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/sadness/public_html/jellyworld/register/register.php on line 86

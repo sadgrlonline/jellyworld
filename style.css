@@ -1,0 +1,35 @@
+    .flex {
+        display:flex;
+        flex-wrap:wrap;
+        max-width:100%;
+        
+    }
+    .hidden {
+        color:green;
+        font-weight:bold;
+    }
+    body {
+        font-family:sans-serif;
+        font-size:1em;
+    }
+    .box {
+        border:1px solid black;
+        width:220px;
+        padding:20px;
+        word-break:break-word;
+        height:220px;
+        position:relative;
+    }
+    label {
+        font-weight:bold;
+    }
+    
+    #submitJelly {
+        padding:20px;
+        margin-top:40px;
+    }
+    
+    input[type="text"], input[type="password"] {
+        padding:10px;
+        margin-bottom:10px;
+    }
