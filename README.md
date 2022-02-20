@@ -2,7 +2,7 @@
 
 This is a project I made for a friend. They started off with a JSON file that had to manually be maintained, so I built a back-end with PHP/SQL to make management a little more automated.
 
-This project is built & tested with PHP 7.4.
+This project is built & tested with PHP 7.4. The database schema can be imported into <strong>phpMyAdmin</strong> with [this file](https://github.com/sadgrlonline/jellyworld/blob/main/sadness_jellyworld.sql).
 
 ## Overview
 
