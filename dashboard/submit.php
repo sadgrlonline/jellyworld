@@ -20,7 +20,7 @@ if (isset($_POST['jellyName'])) {
 $stmt->bind_param("ssssssssss", $jelly_name, $jelly_img, $jelly_desc, $claimed,  $owner_name, $owner_desc, $owner_link, $owner_button, $comments, $id);
 $stmt->execute();
 $result = $stmt->get_result();
-$stmt->close;
+$stmt->close();
     // this generates the JSON file
     $rows = array();
     $sql = ("SELECT id, jellyname, jelly_image, flavortext, claimed, owner_name, owner_desc, owner_link, owner_button, comments FROM jellytable WHERE approved = 1;");
